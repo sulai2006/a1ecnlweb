@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 *{
@@ -21,7 +17,6 @@ body {
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
     color: #1aa260;
 }
 
@@ -31,26 +26,21 @@ span {
 }
 
 h2 {
-   font-family: 'Raleway', sans-serif;
     color: #1aa260;
 }
 
-
 h5 {
-    font-family: 'Raleway', sans-serif;
-     color: #1aa260;
- }
- 
+    color: #1aa260;
+}
 
 h6 {
     font-size: 1.1rem;
-    font-family: 'Raleway', sans-serif;
     color: #1aa260;
 }
 
 /* Navigation*/
 nav {
-    
+    position: fixed; /*to fixed the nav on top*/
     width: 100%;
     background-color: white; /*you can delete if you want the nav bar to have same background as the site*/
     display: flex; /* to make everything in one row*/
@@ -63,8 +53,8 @@ nav {
 } /*to modify the navigation content*/
 
 nav img {
-    width: 160px;
-    height: 90px;
+    width: 120px;
+    height: 60px;
     cursor: pointer; /* to be able to click the logo*/
    /* border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;*/
@@ -124,40 +114,32 @@ nav .navigation li a:hover{
 
 /*-------------------------Home------------------------*/
 #home {
-    background-image: linear-gradient(rgba(8, 90, 15, 0.75),rgba(5,4,46,0.85)),url("images/Our\ Services5.jpg");
+    background-image: linear-gradient(rgba(8, 90, 15, 0.75),rgba(5,4,46,0.85)),url("images/Our Services5.jpg");
     width: 100%;
     height: 100vh;
-    
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    text-align: left;
-    /*align-items: center;
-    text-align: center;*/
+    align-items: center;
+    text-align: center;
     padding-top: 40px;
-    padding-left: 100px;
 }
 
 #home h2 {
     color: white;
-    font-size: 49px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     line-height: 71px;
-    font-weight: 800;
 }
 
 #home p {
     width: 50%;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 25px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/  /*I comment this out*/
 }
 
 #home .btn{
@@ -179,14 +161,27 @@ nav .navigation li a:hover{
     font-size: 0.9rem;
     border: 3px solid green;
     transition: 0.3s ease;
+    margin-right: 30px;
 }
 
 #home a.blue:hover {
     color: white;
     background: green;
- 
 }
 
+#home a.yellow {
+    color: greenyellow;
+    background: transparent;
+    font-size: 0.9rem;
+    border: 3px solid greenyellow;
+    transition: 0.3s ease;
+    margin-left: 30px;
+}
+
+#home a.yellow:hover {
+    color: white;
+    background: greenyellow;
+}
 
 /*services*/
 
@@ -194,23 +189,6 @@ nav .navigation li a:hover{
     padding: 5vw 8vw 0 8vw;
     text-align: center;
     padding-bottom: 2vw;/* delete after insert "our patners" in About us*/
-}
-
-#services h1 {
-    font-size: 49px;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
-    line-height: 56px;
-    font-weight: 700;
-}
-
-#services p{
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    margin-top: 10px;
 }
 
 #services .btn{
@@ -243,16 +221,24 @@ nav .navigation li a:hover{
 #services .fea-box{
     /*background: #f9f9ff;*/
     text-align: start;
-    /*background: linear-gradient(#f9f9ff, #f9f9ff 50%, #232D51 50%, #232D51);*/
+   /* background: linear-gradient(#f9f9ff, #f9f9ff 50%, #232D51 50%, #232D51);*/
     background-size: 100% 200%;
     transition: 0.4s;
 }
 
+/*#services .fea-box:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    /*background: #232D51;*/
+   /* background-position: 55% 55%;
+    color: #fff;
+}*/
 
 #services .fea-box img{
     width: 369px;
     height: 242px;
+    /*color: rgb(44,44,80);*/
     padding: 10px;
+   /* margin-left: 30%;*/
    transition: 0.3s;
 }
 
@@ -260,12 +246,10 @@ nav .navigation li a:hover{
     transform: scale(1.1);
 }
 
-
 #services .fea-box h3{
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 13px 5px 7px 5px;
-    line-height: 20px;
 }
 
 #services .fea-box p{
@@ -277,14 +261,14 @@ nav .navigation li a:hover{
     grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
     grid-gap: 1rem;
     margin-top: 50px;    
-} /*to let the card stay side by si0de. you can also try float method*/
+} /*to let the card stay side by side. you can also try float method*/
 
 
 
 /*Project*/
 
 #project {
-    padding: 4vw 8vw 4vw 8vw;
+    padding: 8vw 8vw 8vw 8vw;
     text-align: center;
 }
 
@@ -294,10 +278,15 @@ nav .navigation li a:hover{
 
 #project .projects{
     text-align: start;
+   /* background: #f9f9ff;*/
     height: 100%;
     position: relative;
     transition: 0.3sec;
 }
+
+/*#project .projects:hover {
+     background: rgba(17,20,104,0.45);
+} */
 
 #project .projects img{
     width: 100%;
@@ -313,10 +302,28 @@ nav .navigation li a:hover{
     margin-top: 50px;
 }
 
+#project .projects .details{
+    padding: 15px 15px 0 15px;
+}
+
+#project .projects .cost{
+    background-color: rgb(74,74,136);
+    color: white;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px ;
+    bottom: 100px;
+}
+
+
 /* Choose*/
 
 #choose{
-    padding: 5vw 5vw 0 5vw;
+    padding: 5vw 8vw 0 8vw;
     text-align: center;
     padding-bottom: 5vw;/* delete after insert "our patners" in About us*/
     background: #98d260;
@@ -336,6 +343,14 @@ nav .navigation li a:hover{
     color: #fff;
 }
 
+/*#choose .fea-box img{
+    width: 120px;
+    height: 120px;
+    /*color: rgb(44,44,80);*/
+  /*  padding: 10px;
+    margin-left: 30%;
+} */
+
 #choose .fea-box h3{
     font-size: 1.2rem;
     font-weight: 600;
@@ -343,13 +358,7 @@ nav .navigation li a:hover{
 }
 
 #choose .fea-box p{
-    padding: 0px 5px 5px 5px;
-    margin: 5px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
+    padding: 0px 5px 5px 10px;
 }
 
 #choose .fea-base{
@@ -381,6 +390,21 @@ nav .navigation li a:hover{
     margin-top: 10px;    
 }
 
+/*#experts .expert-box .pro-links img{
+    height: 30px;
+    width: 30px;
+    padding: 2px 5px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer; 
+    transition: 0.3s ease;
+}
+
+#experts .expert-box .pro-links img:hover{
+    background:rgb(21, 21, 100);
+    color: white;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer; 
+} */
 
 /*index blog*/
 
@@ -389,10 +413,6 @@ nav .navigation li a:hover{
     padding: 0vw 8vw 8vw 8vw;
     text-align: center;
     background: #98d260;
-}
-
-#blog h1{
-    padding-top: 20px;
 }
 
 #blog hr{
@@ -439,8 +459,8 @@ nav .navigation li a:hover{
 
 #blog .expert-box .pro-links img:hover{
     background:rgb(71, 100, 21);
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(70, 100, 21);
+    color: white;
+    border: 1px solid rgb(71, 100, 21);
     cursor: pointer; 
 }
 
@@ -583,15 +603,14 @@ footer .copyright .pro-links img:hover{
     text-align: center;
 }
 
-#about-who p{font-family: 'Poppins', sans-serif;
-color: #686f7a;
-font-weight: 300;
+#about-who p{
+    color: #686f7a;
 }
 
 #about-container{
     display: flex;
     align-items: center;
-    padding: 2vw 8vw 2vw 8vw;
+    padding: 8vw 8vw 2vw 8vw;
 }
 
 #about-container .about-img{
@@ -614,7 +633,6 @@ font-weight: 300;
 
 #about-container .about-text p{
     color: #686f7a;
-    font-weight: 300;
 }
 
 #about-container .about-text .about-fe{
@@ -637,14 +655,11 @@ font-weight: 300;
 
 #about-container .about-text .about-fe .fe-text h5{
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
     color: #1aa260;
 }
 
 #about-container .about-text .about-fe .fe-text p{
-    font-family: 'Poppins', sans-serif;
     color: #686f7a;
-    font-weight: 300;
 }
 
 
@@ -852,7 +867,6 @@ font-weight: 300;
 
 #contact .getin h2{
     color: #1aa260;
-    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: 800;
     line-height: 0.8px;
@@ -869,7 +883,6 @@ font-weight: 300;
 
 #contact .getin h3{
     color: #1aa260;
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;
@@ -980,7 +993,6 @@ font-weight: 300;
 
 /*-------------Media-------------------------------*/
 
-
 @media (max-width:1025px){
 
     /*about*/
@@ -1007,9 +1019,9 @@ font-weight: 300;
 
 @media (max-width:913px){
     
-    /*about*/
+     /*about*/
 
-    #work {
+     #work {
         height: 20vh;
         justify-content: center;
         align-items: center;
@@ -1038,17 +1050,13 @@ font-weight: 300;
     }
     #project-inner .overview .project-img{
         width: 100%;
-        height: 1000%;
+        height: 100%;
     }
     #project-inner .enroll{
         margin-top: 25px;
     }
+    
 
-    #about-container .about-img{
-        width: 60%;
-        height: 120%;
-        padding-right: 60px;
-    }
 }
 
 @media (max-width:821px){
@@ -1078,7 +1086,7 @@ font-weight: 300;
         right: -220px;
         width: 220px;
         height: 100vh;
-        background: rgba(17, 104, 59, 0.45);
+        background: rgba(17,20,104,0.45);
         backdrop-filter: blur(4.5px);
         -webkit-backdrop-filter: blur(4.5px);
         border: 1px solid rgba(255,225,255,0.18);
@@ -1087,7 +1095,6 @@ font-weight: 300;
         justify-content: flex-start;
         align-items: flex-start;
         transition: 0.3s ease;
-        
     }
     nav .navigation ul.active{
         right: 0;
@@ -1103,8 +1110,16 @@ font-weight: 300;
         padding-top: 0px;
     }
 
+    #home a.blue {
+        border: 3px solid green;
+    }
+
+    #home a.yellow {
+        border: 3px solid greenyellow;
+    }
+
     #home p{
-        width: 80%;
+        width: 90%;
     }
     #services{
         padding: 8vw 4vw 0 4vw;
@@ -1153,7 +1168,7 @@ font-weight: 300;
     }
 
     #work {
-        height: 25vh;
+        height: 22vh;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -1166,7 +1181,6 @@ font-weight: 300;
         grid-gap: 1rem;
         margin-top: 10px;
     }
-
 
     /*Blog*/
 
@@ -1218,8 +1232,6 @@ font-weight: 300;
 
 
 @media (max-width:541px){
-    
-    
     /*About*/
     #about-container {
         flex-direction: column-reverse;
@@ -1233,6 +1245,14 @@ font-weight: 300;
         padding-bottom: 20px;
     }
 
+    #work {
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2vw 1vw 2vw 1vw;
+    }
+
     #work .work-box{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1240,6 +1260,7 @@ font-weight: 300;
         margin-top: 10px;
     }
 
+    
     /*contact*/
     #contact {
         padding: 8vw 4vw;
@@ -1266,16 +1287,13 @@ font-weight: 300;
     }
 
     #home h2 {
-        color: white;
         font-size: 30px;
-        font-family: 'Raleway', sans-serif;
         letter-spacing: 1px;
         line-height: 40px;
         font-weight: 800;
     }
 
     #home p {
-        width: 90%;
         margin-top: 20px;
     }
 
@@ -1392,11 +1410,11 @@ font-weight: 300;
         width: 200px;
         padding: 12px 15px;                    
     }
-
+    
     /*about*/
    
     #work {
-        height: 60vh;
+        height: 65vh;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -1421,16 +1439,14 @@ font-weight: 300;
 }
 
 @media (max-width:295px){
-    
+
     #home {
         padding-top: 0px;
         padding-left: 20px;
     }
 
     #home h2 {
-        color: white;
         font-size: 20px;
-        font-family: 'Raleway', sans-serif;
         letter-spacing: 1px;
         line-height: 25px;
         font-weight: 800;
@@ -1439,15 +1455,19 @@ font-weight: 300;
     #home p {
         width: 90%;
         font-size: 9px;
-        line-height: 15px;
+        line-height: 12px;
         margin-top: 20px;
     }
 
     #home a.blue {
-        padding: 10px 12px;
+        margin-right: 10px;
+        padding: 5px 6px;
+        border: 2px solid green;
     }
     #home a.yellow {
-        padding: 10px 12px;
+        margin-left: 15px;
+        padding: 5px 6px;
+        border: 2px solid greenyellow;
     }
     #services{
         padding: 5vw 1.5vw 0 1.5vw;
@@ -1467,6 +1487,7 @@ font-weight: 300;
     #choose{
         padding: 1.5vw 1.5vw 2vw 1.5vw;
         margin-top: 10px;
+        width: 98%;
     }
 
     #choose h1{
@@ -1491,11 +1512,10 @@ font-weight: 300;
     
     #choose .fea-box p{
         padding: 0px 5px 0px 5px;
-        margin: 1px;
+        margin: 5px;
         font-size: 9px;
         line-height: 15px;
         font-weight: 400;
-        font-family: 'Poppins', sans-serif;
         letter-spacing: 1px;
     }
 
@@ -1518,7 +1538,12 @@ font-weight: 300;
         width: 200px;
     }
 
-   
+    #registration{
+        margin-top: 8vw;
+        padding: 5vw 1.5vw 5vw 1.5vw;
+        width: 100%;
+        height: 60%;
+    }
     #project {
         width: 95%;
         height: 60%;
@@ -1541,12 +1566,35 @@ font-weight: 300;
     #project .project-box h6{
         font-size: 20px;
     }
-
     #project .project-box .projects img{
         width: 250px;
         height: 200px;
     }
-/* About */
+
+    #project .courses .cost{
+        right: 55px ;
+        bottom: 90px;
+    }
+    footer .subscribe a{
+        font-size: 0.7rem;
+        padding: 10px 12px;
+    }
+
+    footer input{
+        width: 100px;
+        padding: 10px 12px;                    
+    } 
+
+    /* About */
+
+    #work {
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2vw 1vw 2vw 1vw;
+    }
+
     #work .work-box{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -1560,7 +1608,6 @@ font-weight: 300;
     }
 
     #about-who p{
-        font-family: 'Poppins', sans-serif;
         font-size: 10px;
     }
 
@@ -1586,24 +1633,6 @@ font-weight: 300;
         width: 100%;
         height: 250px;
     }
-
-    #project .courses img{
-        width: 50%;
-        height: 60%;
-    }
-    #project .courses .cost{
-        right: 55px ;
-        bottom: 90px;
-    }
-    footer .subscribe a{
-        font-size: 0.7rem;
-        padding: 10px 12px;
-    }
-
-    footer input{
-        width: 100px;
-        padding: 10px 12px;                    
-    } 
 
     /*Project Inner*/
 

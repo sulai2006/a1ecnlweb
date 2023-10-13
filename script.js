@@ -14,6 +14,3 @@ if(navItems[i].href === window.location.href) {
 }
 }
 
-
-
-
